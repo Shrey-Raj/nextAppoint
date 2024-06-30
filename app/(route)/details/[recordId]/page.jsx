@@ -8,16 +8,18 @@ function Details({params}) {
 
   console.log('params = ' , params); 
 
-  const [doctor,setDoctor] = useState();
-  useEffect(()=>{
-    getDoctorById();
-  },[]);
-
   const getDoctorById=()=>{
     GlobalApi.getDoctorById(params.recordId).then(resp=>{
       setDoctor(resp.data.data);
     })
   }
+
+  const [doctor,setDoctor] = useState();
+  useEffect(()=>{
+    getDoctorById();
+  },[]);
+
+
   return (
     <div className='p-5 md:px-10'>
       <h2 className='font-bold text-[22px]'>Details</h2>
