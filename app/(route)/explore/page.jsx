@@ -3,11 +3,8 @@ import React, { useState, useEffect } from "react";
 import GlobalApi from "@/app/_utils/GlobalApi";
 import ExploreAllDoc from "./_components/ExploreAllDoc";
 
-const page = () => {
+const Explore = () => {
   const [doctorList, setDoctorList] = useState([]);
-  useEffect(() => {
-    getDoctorList();
-  }, []);
 
   const getDoctorList = () => {
     GlobalApi.getDoctorList().then((resp) => {
@@ -16,7 +13,12 @@ const page = () => {
     });
   };
 
+  useEffect(() => {
+    getDoctorList();
+  }, []);
+
+
   return <ExploreAllDoc doctorList={doctorList} />;
 };
 
-export default page;
+export default Explore;
