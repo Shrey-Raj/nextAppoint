@@ -52,14 +52,15 @@ function DoctorDetail({doctor}) {
                     <span>{doctor.attributes.address}</span>
                 </h2>
                 <h2 className='text-[10px] bg-blue-100 p-1 rounded-full
-                        px-2 text-primary'>{doctor.attributes.name}</h2>
+                        px-2 text-primary capitalize'>{doctor.attributes.categories.data.attributes.name}</h2>
 
                 <div className='flex gap-3'>
                     {socialMediaList.map((item,index)=>(
-                        <Link href={`${item.url}`+ `${doctor.attributes.name}`} className="hover:cursor-pointer">
+                        <Link key={index} href={`${item.url}`+ `${doctor.attributes.name}`} className="hover:cursor-pointer">
                         <Image src={item.icon} key={index}
                         width={30}
                         height={30}
+                        alt="doctor-icon"
                         /></Link>
                     ))}
                 </div>
