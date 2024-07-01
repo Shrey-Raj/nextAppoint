@@ -66,3 +66,5 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
 }
 
 export default DoctorList;
+
+
