@@ -17,7 +17,7 @@ function Details({params}) {
   const [doctor,setDoctor] = useState();
   useEffect(()=>{
     getDoctorById();
-  },[]);
+  },[getDoctorById]);
 
 
   return (

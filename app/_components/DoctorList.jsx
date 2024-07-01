@@ -17,9 +17,8 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
       >
         {doctorList.length > 0
           ? doctorList.map((doctor, index) => index<6&&(
-            <div
+            <div key={index}
               className="border-[1px] rounded-lg p-3 cursor-pointer hover:border-primary hover:shadow-sm transition-all ease-in-out flex flex-col justify-between"
-              key={index}
             >
               <Image
                 src={doctor?.attributes?.image?.data[0]?.attributes?.url || imageUrl}

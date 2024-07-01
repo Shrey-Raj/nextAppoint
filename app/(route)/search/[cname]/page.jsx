@@ -5,10 +5,6 @@ import React, { useEffect, useState } from "react";
 
 function Search({ params }) {
   const [doctorList, setDoctorList] = useState([]);
-  useEffect(() => {
-    console.log(params.cname);
-    getDoctors();
-  }, []);
 
   const getDoctors = () => {
     GlobalApi.getDoctorByCategory(params.cname).then((resp) => {
@@ -16,6 +12,13 @@ function Search({ params }) {
       setDoctorList(resp.data.data);
     });
   };
+
+  useEffect(() => {
+    console.log(params.cname);
+    getDoctors();
+  }, [getDoctors]);
+
+
   
   return (
     <div className="mt-5">

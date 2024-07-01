@@ -32,7 +32,7 @@ const getUserBookingList = (userEmail) =>
 const deleteBooking = (id) => axiosClient.delete("/appointments/" + id);
 
 
-export default {
+const api = {
   getCategory,
   getDoctorList,
   getDoctorByCategory,
@@ -41,3 +41,5 @@ export default {
   getUserBookingList,
   deleteBooking,
 };
+
+export default api;

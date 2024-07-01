@@ -25,7 +25,7 @@ function BookingList({bookingList,expired,updateRecord,bgGrey}) {
   return (
     <div>
         {bookingList.length>0?bookingList.map((item,index)=>(
-            <div className={`flex gap-4 items-center border p-5 m-3 rounded-lg ${bgGrey ? 'bg-gray-100' : ''}`}>
+            <div key={index} className={`flex gap-4 items-center border p-5 m-3 rounded-lg ${bgGrey ? 'bg-gray-100' : ''}`}>
 
                 <Image src={item.attributes.doctor.data.attributes.image.data[0].attributes.url}
                 className='rounded-full h-[70px] w-[70px] object-cover'
