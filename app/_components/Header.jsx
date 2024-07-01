@@ -31,7 +31,7 @@ const Header = () => {
   
   const {user}  = useKindeBrowserClient();
   useEffect(()=>{
-    console.log(user);
+    // console.log(user);
   },[user]);
 
   return (
