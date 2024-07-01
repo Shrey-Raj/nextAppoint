@@ -10,7 +10,7 @@ function Footer() {
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
           We hope that <span className="font-bold">NextAppoint</span> was able
           to help you! You can always reach out to us at our social media
-          handles down below, we'd love to hear from you.
+          handles down below, we would love to hear from you.
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
