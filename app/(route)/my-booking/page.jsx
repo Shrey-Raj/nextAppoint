@@ -13,7 +13,7 @@ function MyBooking() {
         
     const getUserBookingList=()=>{
         GlobalApi.getUserBookingList(user?.email).then(resp=>{
-            console.log(resp.data.data)
+            // console.log(resp.data.data)
             setBookingList(resp.data.data);
         })
     }

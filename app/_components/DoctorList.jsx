@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 function DoctorList({ doctorList, heading = "Popular Doctors" }) {
-  console.log("doctorList = ", doctorList);
+  // console.log("doctorList = ", doctorList);
 
   const imageUrl = "/logo.svg";
 

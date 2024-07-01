@@ -9,12 +9,12 @@ import { toast } from 'sonner'
 
 function BookingList({bookingList,expired,updateRecord,bgGrey}) {
 
-  console.log('Booking List : ' , bookingList); 
+  // console.log('Booking List : ' , bookingList); 
   
   const onDeleteBooking=(item)=>{
-    console.log(item)
+    // console.log(item)
     GlobalApi.deleteBooking(item.id).then(resp=>{
-      console.log(resp);
+      // console.log(resp);
       if(resp)
       {
         toast('Booking Delete Successfully!');

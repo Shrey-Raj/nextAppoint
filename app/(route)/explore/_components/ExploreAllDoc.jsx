@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const ExploreAllDoc = ({doctorList, initialSearchTerm}) => {
+const ExploreAllDoc = ({doctorList, initialSearchTerm = ''}) => {
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
   // console.log('Doctor list from Explore all docs = ' , doctorList , initialSearchTerm );
 
@@ -26,7 +26,7 @@ const ExploreAllDoc = ({doctorList, initialSearchTerm}) => {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-        {filteredDoctors.map((doctor, index) => index<9&&(
+        {filteredDoctors.length > 0 ? filteredDoctors.map((doctor, index) => index<9&&(
           <Link
             key={index}
             href={"/details/" + doctor.id}
@@ -55,7 +55,13 @@ const ExploreAllDoc = ({doctorList, initialSearchTerm}) => {
               </div>
             </div>
           </Link>
-        ))}
+        ))
+        : // Skelton Effect
+            [1, 2, 3, 4, 5, 6].map((item, index) => (
+              <div key={index} className="h-[360px] bg-slate-200 w-full rounded-lg animate-pulse"></div>
+            ))
+
+        }
       </div>
     </div>
   );

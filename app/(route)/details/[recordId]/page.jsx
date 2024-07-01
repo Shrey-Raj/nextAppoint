@@ -6,7 +6,7 @@ import DoctorSuggestionList from '../_components/DoctorSuggestionList';
 
 function Details({params}) {
 
-  console.log('params = ' , params); 
+  // console.log('params = ' , params); 
 
   const getDoctorById=()=>{
     GlobalApi.getDoctorById(params.recordId).then(resp=>{

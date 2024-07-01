@@ -8,13 +8,13 @@ function Search({ params }) {
 
   const getDoctors = () => {
     GlobalApi.getDoctorByCategory(params.cname).then((resp) => {
-      console.log("All ", params.cname, " = ", resp.data.data);
+      // console.log("All ", params.cname, " = ", resp.data.data);
       setDoctorList(resp.data.data);
     });
   };
 
   useEffect(() => {
-    console.log(params.cname);
+    // console.log(params.cname);
     getDoctors();
   }, [getDoctors]);
 

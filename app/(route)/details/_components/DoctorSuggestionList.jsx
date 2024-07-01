@@ -7,15 +7,19 @@ import { GraduationCap } from 'lucide-react';
 
 function DoctorSuggestionList() {
     const [doctorList,setDoctorList]=useState([]);
-    useEffect(()=>{
-      getDoctorList();
-    },[])
+
     const getDoctorList=()=>{
       GlobalApi.getDoctorList().then(resp=>{
-        console.log(resp.data.data);
+        // console.log(resp.data.data);
         setDoctorList(resp.data.data);
       })
     }
+
+    useEffect(()=>{
+      getDoctorList();
+    },[getDoctorList]); 
+
+
   return (
     <div className='p-4 border-[1px] mt-5 md:ml-5 rounded-lg w-full max-h-screen'>
     <h2 className='mb-3 font-bold'>Suggestions</h2>

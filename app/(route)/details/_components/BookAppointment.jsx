@@ -25,7 +25,7 @@ function BookAppointment({doctor}) {
     const [note,setNote]=useState();
     const {user}=useKindeBrowserClient();
 
-    console.log('Doctor details as on BookAppointment component : ' , doctor); 
+    // console.log('Doctor details as on BookAppointment component : ' , doctor); 
 
     useEffect(()=>{
       getTime();
@@ -80,7 +80,7 @@ function BookAppointment({doctor}) {
       
 
       GlobalApi.bookAppointment(data).then(resp=>{
-        console.log('appointment booked response = ' , resp);
+        // console.log('appointment booked response = ' , resp);
         if(resp){
           emailjs.send(service_id, template_id, templateParams, user_id)
           .then((response) => {

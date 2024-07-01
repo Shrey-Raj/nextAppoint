@@ -6,7 +6,7 @@ import GlobalApi from '@/app/_utils/GlobalApi';
 const ExplorePage = ({ params }) => {
   const { searchTerm } = params;
   
-  console.log('Params  : ' , params) ; 
+  // console.log('Params  : ' , params) ; 
 
   const [doctorList, setDoctorList] = useState([]);
   useEffect(() => {
@@ -15,7 +15,7 @@ const ExplorePage = ({ params }) => {
 
   const getDoctorList = () => {
     GlobalApi.getDoctorList().then((resp) => {
-      console.log(resp.data.data);
+      // console.log(resp.data.data);
       setDoctorList(resp.data.data);
     });
   };

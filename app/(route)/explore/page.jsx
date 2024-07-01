@@ -8,7 +8,7 @@ const Explore = () => {
 
   const getDoctorList = () => {
     GlobalApi.getDoctorList().then((resp) => {
-      console.log(resp.data.data);
+      // console.log(resp.data.data);
       setDoctorList(resp.data.data);
     });
   };
@@ -17,8 +17,12 @@ const Explore = () => {
     getDoctorList();
   }, []);
 
-
-  return <ExploreAllDoc doctorList={doctorList} />;
+  return (
+    <>
+      <h1>Explore All Doctors</h1>
+      <ExploreAllDoc doctorList={doctorList} />
+    </>
+  );
 };
 
 export default Explore;
