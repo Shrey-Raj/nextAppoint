@@ -20,7 +20,7 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
               (doctor, index) =>
                 index < 6 && (
                   <div
-                    key={index}
+                    key={doctor.id} // Use doctor's id as key
                     className="border-[1px] rounded-lg p-3 cursor-pointer hover:border-primary hover:shadow-sm transition-all ease-in-out flex flex-col justify-between"
                   >
                     <Image
@@ -58,7 +58,7 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
             )
           : // Skelton Effect
             [1, 2, 3, 4, 5, 6].map((item, index) => (
-              <div className="h-[220px] bg-slate-200 w-full rounded-lg animate-pulse"></div>
+              <div key={index} className="h-[220px] bg-slate-200 w-full rounded-lg animate-pulse"></div>
             ))}
       </div>
     </div>
