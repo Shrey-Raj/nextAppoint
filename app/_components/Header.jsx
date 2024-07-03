@@ -48,40 +48,40 @@ const Header = () => {
             )}
           </ul>
 
-            <ul className="block md:hidden">
-              <MyDropdownMenu />
-            </ul> 
-
         </div>
 
+      <div className="flex  justify-center content-center my-auto">
         {user?
-      
-      <Popover>
-       <PopoverTrigger>
-       {user?.picture? 
-       <Image src={user?.picture} alt='profile-image'
-       width={40}
-       height={40}
-       className='rounded-full' />:
-       <Image src={'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png'} alt='profile-image'
-       width={40}
-       height={40}
-       className='rounded-full' />}
-       </PopoverTrigger>
-       <PopoverContent className="w-44">
-           <ul className='flex  flex-col gap-2'>
-          
-           <Link href={'/my-booking'} className='cursor-pointer
-            hover:bg-slate-100 p-2 rounded-md'>My Booking</Link>
-               <li className='cursor-pointer
-            hover:bg-slate-100 p-2 rounded-md'>
-               <LogoutLink> Logout </LogoutLink></li>
-           </ul>
-       </PopoverContent>
-       </Popover>
-      :
-       <LoginLink> <Button>Get Started</Button></LoginLink>
-      } 
+        <Popover>
+         <PopoverTrigger>
+         {user?.picture?
+         <Image src={user?.picture} alt='profile-image'
+         width={40}
+         height={40}
+         className='rounded-full' />:
+         <Image src={'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png'} alt='profile-image'
+         width={40}
+         height={40}
+         className='rounded-full' />}
+         </PopoverTrigger>
+         <PopoverContent className="w-44">
+             <ul className='flex  flex-col gap-2'>
+        
+             <Link href={'/my-booking'} className='cursor-pointer
+              hover:bg-slate-100 p-2 rounded-md'>My Booking</Link>
+                 <li className='cursor-pointer
+              hover:bg-slate-100 p-2 rounded-md'>
+                 <LogoutLink> Logout </LogoutLink></li>
+             </ul>
+         </PopoverContent>
+         </Popover>
+        :
+         <LoginLink> <Button>Get Started</Button></LoginLink>
+        }
+          <ul className="block md:hidden ml-5 my-auto">
+                <MyDropdownMenu />
+          </ul>
+      </div>
     </div>
   );
 };
