@@ -9,6 +9,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import MyDropdownMenu from "./MyDropdownMenu";
 
 const Header = () => {
   const Menu = [
@@ -39,13 +40,17 @@ const Header = () => {
         <div className="flex items-center gap-10 ">
         <Link href='/'><Image src="/logo.svg" width={200} height={100} alt="logo" /></Link>
 
-          <ul className="flex gap-6 md:gap-8 ">
+          <ul className="hidden md:flex gap-8 ">
             {Menu.map((item, index) => 
               <Link key={index} href={item.path}>
               <li className="hover:text-primary cursor-pointer hover:scale-105 transition-all ease-in-out">{item.name}</li>
               </Link>
             )}
           </ul>
+
+            <ul className="block md:hidden">
+              <MyDropdownMenu />
+            </ul> 
 
         </div>
 
