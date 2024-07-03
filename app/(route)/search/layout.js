@@ -1,5 +1,6 @@
 import React from 'react'
 import CategoryList from './_components/CategoryList'
+import { DropdownMenuRadioGroupDemo } from './_components/MenuForSmallScreens'
 
 function layout({children}) {
   return (
@@ -7,6 +8,9 @@ function layout({children}) {
       <div className='hidden md:block'>
         {/* Category  */}
         <CategoryList />
+      </div>
+      <div className="block sm:hidden ">
+          <DropdownMenuRadioGroupDemo />
       </div>
       <div className='col-span-4 md:col-span-3'>
        {children}

@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center gap-10 ">
         <Link href='/'><Image src="/logo.svg" width={200} height={100} alt="logo" /></Link>
 
-          <ul className="md:flex gap-8 hidden">
+          <ul className="flex gap-6 md:gap-8 ">
             {Menu.map((item, index) => 
               <Link key={index} href={item.path}>
               <li className="hover:text-primary cursor-pointer hover:scale-105 transition-all ease-in-out">{item.name}</li>

@@ -19,7 +19,6 @@ const Explore = () => {
 
   return (
     <>
-      <h1>Explore All Doctors</h1>
       <ExploreAllDoc doctorList={doctorList} />
     </>
   );

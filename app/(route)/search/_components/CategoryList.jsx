@@ -15,6 +15,7 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { ComboboxDemo } from './MenuForSmallScreens';
 
 function CategoryList() {
     const [categoryList,setCategoryList]=useState([]);
@@ -33,7 +34,7 @@ function CategoryList() {
   }
   return (
     <div className='h-screen mt-5 flex flex-col'>
-        <Command >
+        <Command className="hidden sm:block">
             <CommandInput placeholder="Type a command or search..." />
             <CommandList className="overflow-visible">
                 <CommandEmpty>No results found.</CommandEmpty>
@@ -59,9 +60,10 @@ function CategoryList() {
                     ))}
                 </CommandGroup>
             </CommandList>
-</Command>
+        </Command>
+
     </div>
   )
 }
 
-export default CategoryList
+export default CategoryList ;

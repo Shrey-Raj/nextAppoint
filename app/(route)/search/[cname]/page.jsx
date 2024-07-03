@@ -17,8 +17,6 @@ function Search({ params }) {
     // console.log(params.cname);
     getDoctors();
   }, [getDoctors]);
-
-
   
   return (
     <div className="mt-5">

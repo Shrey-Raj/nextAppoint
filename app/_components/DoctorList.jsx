@@ -12,7 +12,7 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
       <h2 className="font-bold text-xl capitalize">{heading}</h2>
 
       <div
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3
+        className="grid sm:grid-cols-1 md:grid-cols-3
         gap-7 mt-4 lg:grid-cols-3"
       >
         {doctorList.length > 0

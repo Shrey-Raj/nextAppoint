@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SearchCheck } from 'lucide-react';
 
 const ExploreAllDoc = ({doctorList, initialSearchTerm = ''}) => {
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
@@ -16,14 +17,14 @@ const ExploreAllDoc = ({doctorList, initialSearchTerm = ''}) => {
 
   return (
     <div className="p-4">
-      <div className="mb-6">
+    <h1 className="text-lg font-bold mb-8">Explore All Doctors</h1>
+      <div className="mb-6 flex w-full p-2 border border-gray-300 rounded-lg justify-between" >
         <input
           type="text"
-          placeholder="Search for doctors by name..."
-          className="w-full p-2 border border-gray-300 rounded-lg"
+          placeholder="Search for doctors by name or category..."
           value={searchTerm}
           onChange={(e) => {setSearchTerm(e.target.value) ; }}
-        />
+        /><SearchCheck/>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {filteredDoctors.length > 0 ? filteredDoctors.map((doctor, index) => index<9&&(
@@ -60,7 +61,6 @@ const ExploreAllDoc = ({doctorList, initialSearchTerm = ''}) => {
             [1, 2, 3, 4, 5, 6].map((item, index) => (
               <div key={index} className="h-[360px] bg-slate-200 w-full rounded-lg animate-pulse"></div>
             ))
-
         }
       </div>
     </div>
