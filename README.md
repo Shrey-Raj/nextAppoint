@@ -18,15 +18,16 @@ NextAppoint is a web application that helps users book appointments with the doc
 - ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)
 - ![Shadcn UI](https://img.shields.io/badge/shadcn/ui-000000.svg?style=for-the-badge&logo=shadcn/ui&logoColor=white)
 
-## Screenshots
+## Sneakpeeks
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/15922b1b-5a7a-42a3-99b8-a1775710edbf" alt="Screenshot 3" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/ac03aea3-c1ca-4acc-af84-c420696e7879" alt="Screenshot 4" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/de3cf65f-a16f-4079-bf9e-661f10db4a21" alt="Screenshot 5" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/c4aeb22e-b130-4252-af68-0e309783308a" alt="Screenshot 1" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/f12e6371-bbd1-44b9-bbf2-f50bfa3ede87" alt="Screenshot 2" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
-  <img src="https://github.com/Shrey-Raj/events-app/assets/119098647/eb28438f-7f0d-4cea-a28d-4ca187fd329d" alt="Screenshot 5" style="width: 30%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/575e6838-3887-4b9c-9e8a-8ed344ca1ef2" alt="Screenshot 2" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/16381281-e91a-41cc-b5d5-91f46208561c" alt="Screenshot 5" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/0227a268-2582-44e4-b6e7-29ac1f112c06" alt="Screenshot 3" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/ae25a9d6-7fed-42f3-9631-18548c20c334" alt="Screenshot 4" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/36cc375a-4e8d-4d85-8c61-e92a632fe61b" alt="Screenshot 5" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+  <img src="https://github.com/Shrey-Raj/nextAppoint/assets/119098647/78c7c073-dc84-4d2c-a11d-f65c23e57f00" alt="Screenshot 1" style="width: 40%; height: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+
 </div>
 
 ## Video Demonstration
@@ -128,4 +129,4 @@ Explore the live version of the Cryptosphere React App  [here](https://next-appo
 
 Special thanks to the creators and maintainers of the libraries and APIs used in this project.
 
-Happy coding! 🚀
+Happy coding! 🚀 
