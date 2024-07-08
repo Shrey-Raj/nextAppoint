@@ -30,9 +30,7 @@ NextAppoint is a web application that helps users book appointments with the doc
 
 </div>
 
-## Video Demonstration
-
-[![Video Demo](path/to/video_thumbnail.png)](path/to/video.mp4)
+ 
 
 ## Getting Started
 
@@ -123,7 +121,7 @@ To set up your Strapi project and connect it to a PostgreSQL database on Render,
 
 ## Live Demo
 
-Explore the live version of the Cryptosphere React App  [here](https://next-appoint.vercel.app/my-booking).
+Explore the live version of the NextAppoint App  [here](https://next-appoint.vercel.app/my-booking).
 
 ## Acknowledgments
 
