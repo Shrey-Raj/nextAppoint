@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import GlobalApi from "@/app/_utils/GlobalApi";
-import RectangleLoader from "@/components/ui/Loader";
+import {InterPageLoader} from "@/components/ui/Loader";
 import ToastMessage from "@/components/ui/ToastMessage";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ const SignupPage = () => {
   };
 
   if (loading) {
-    return <RectangleLoader />;
+    return <InterPageLoader />;
   }
 
   return (
@@ -127,7 +127,6 @@ const SignupPage = () => {
                   <h3 className="text-center">
                     <a href="/login">Already have an account? Login</a>
                   </h3>
-                  
                 </form>
               </div>
 

@@ -21,27 +21,25 @@ const LoginPage = () => {
     GlobalApi.login({ identifier, password })
       .then((res) => {
         console.log(res);
-        if(res.success === true){
-            router.push('/'); 
-            ToastMessage("Successfully Logged In!"); 
-            setLoading(false); 
-            console.log(res); 
-        }else{
+        if (res.success === true) {
+          router.push("/");
+          ToastMessage("Successfully Logged In!");
           setLoading(false);
-          ToastMessage(res.error); 
+          console.log(res);
+        } else {
+          setLoading(false);
+          ToastMessage(res.error);
         }
       })
       .catch((res) => {
         console.log(res);
-        ToastMessage(`Some Error Occured : ${res}`); 
-        setLoading(false); 
+        ToastMessage(`Some Error Occured : ${res}`);
+        setLoading(false);
       });
   };
 
   if (loading) {
-    return (
-      <Loader/>
-    );
+    return <Loader />;
   }
 
   return (
@@ -54,7 +52,8 @@ const LoginPage = () => {
               <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
                 <Image
                   src="./loginImage.png"
-                  height={800} width={800}
+                  height={800}
+                  width={800}
                   className="btn-"
                 />
               </div>
@@ -108,7 +107,9 @@ const LoginPage = () => {
                       Submit
                     </submit>
                   </div>
-                  <h3 className="text-center"><a href="/signup">Don't have an Account? Sign Up</a></h3>
+                  <h3 className="text-center">
+                    <a href="/signup">Don't have an Account? Sign Up</a>
+                  </h3>
                 </form>
               </div>
 
