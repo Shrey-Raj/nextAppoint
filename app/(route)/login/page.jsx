@@ -7,8 +7,8 @@ import { Loader } from "@/components/ui/Loader";
 import ToastMessage from "@/components/ui/ToastMessage";
 
 const LoginPage = () => {
-  const [identifier, setIdentifier] = useState("johndoe");
-  const [password, setPassword] = useState("strongpassword123");
+  const [identifier, setIdentifier] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();

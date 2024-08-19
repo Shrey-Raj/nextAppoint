@@ -8,9 +8,9 @@ import ToastMessage from "@/components/ui/ToastMessage";
 import Link from "next/link";
 
 const SignupPage = () => {
-  const [email, setEmail] = useState("any@email.com");
-  const [username, setUsername] = useState("any");
-  const [password, setPassword] = useState("anything1234");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
