@@ -13,17 +13,18 @@ import { Button } from '@/components/ui/button'
 import { Calendar } from "@/components/ui/calendar"
 import { CalendarDays, Clock } from 'lucide-react'
 import { Textarea } from '@/components/ui/textarea'
-import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
-import GlobalApi from '@/app/_utils/GlobalApi'
+import GlobalApi , {getCurrentUser} from '@/app/_utils/GlobalApi'
 import { toast , Toaster} from 'sonner'
 import emailjs from '@emailjs/browser';
+import { useSession } from '@/app/sessionValidator'
 
 function BookAppointment({doctor}) {
     const [date, setDate]=useState(new Date());
     const [timeSlot,setTimeSlot]=useState();
     const [selectedTimeSlot,setSelectedTimeSlot]=useState();
     const [note,setNote]=useState();
-    const {user}=useKindeBrowserClient();
+    const session = useSession();
+    const user = session?.user?.data;
 
     // console.log('Doctor details as on BookAppointment component : ' , doctor); 
 
@@ -56,7 +57,7 @@ function BookAppointment({doctor}) {
     const saveBooking=()=>{
       const data={
         data:{
-          UserName:user.given_name+" "+user.family_name,
+          UserName:user.username,
           Email:user.email,
           Time:selectedTimeSlot,
           Date:date,
@@ -72,7 +73,7 @@ function BookAppointment({doctor}) {
       const docDetails = `Your Appointment with doctor ${doctor.attributes.name} has been confirmed! On Date : ${date} At ${selectedTimeSlot} with Your Note : ` ; 
 
       const templateParams = {
-        to_name: user.given_name+" "+user.family_name,
+        to_name: user.username,
         from_email: user.email,
         from_name: 'Doctor Appointment App',
         message: docDetails + note,

@@ -2,8 +2,12 @@ import Image from 'next/image';
 import React from 'react'
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useSession } from '../sessionValidator';
 
 const Hero = () => {
+  const session = useSession(); 
+  const user = session?.user;
+
   return (
     <section>
   <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -19,6 +23,7 @@ const Hero = () => {
       </div>
 
       <div className="lg:py-24">
+       
         <h2 className="text-3xl font-bold sm:text-4xl">Find and Book
 
         <span className='text-primary'> Appointment</span> with your fav 
