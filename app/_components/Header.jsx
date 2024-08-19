@@ -40,7 +40,7 @@ const Header = () => {
 
   const router = useRouter();
 
-  console.log("USER FROM HEADER = ", user);
+  // console.log("USER FROM HEADER = ", user);
 
   const logoutHandler = async () => {
     const res = await api.logoutAPI();

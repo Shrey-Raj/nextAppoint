@@ -21,7 +21,7 @@ export default function SessionValidator({ children }) {
       try {
         const sessionData = await getSession();
         
-        console.log(sessionData); 
+        // console.log(sessionData); 
 
         setSession(sessionData);
         const currentPath = pathname.split("/")[1];

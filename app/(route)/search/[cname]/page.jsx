@@ -6,15 +6,16 @@ import React, { useEffect, useState } from "react";
 function Search({ params }) {
   const [doctorList, setDoctorList] = useState([]);
 
-  const getDoctors = () => {
-    GlobalApi.getDoctorByCategory(params.cname).then((resp) => {
-      // console.log("All ", params.cname, " = ", resp.data.data);
-      setDoctorList(resp.data.data);
-    });
-  };
+
 
   useEffect(() => {
     // console.log(params.cname);
+    const getDoctors = () => {
+      GlobalApi.getDoctorByCategory(params.cname).then((resp) => {
+        // console.log("All ", params.cname, " = ", resp.data.data);
+        setDoctorList(resp.data.data);
+      });
+    };
     getDoctors();
   }, [getDoctors]);
   

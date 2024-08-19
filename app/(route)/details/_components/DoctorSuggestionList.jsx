@@ -8,14 +8,15 @@ import { GraduationCap } from 'lucide-react';
 function DoctorSuggestionList() {
     const [doctorList,setDoctorList]=useState([]);
 
-    const getDoctorList=()=>{
-      GlobalApi.getDoctorList().then(resp=>{
-        // console.log(resp.data.data);
-        setDoctorList(resp.data.data);
-      })
-    }
+    
 
     useEffect(()=>{
+      const getDoctorList=()=>{
+        GlobalApi.getDoctorList().then(resp=>{
+          // console.log(resp.data.data);
+          setDoctorList(resp.data.data);
+        })
+      }
       getDoctorList();
     },[getDoctorList]); 
 

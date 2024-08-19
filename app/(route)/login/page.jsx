@@ -20,12 +20,12 @@ const LoginPage = () => {
 
     GlobalApi.login({ identifier, password })
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.success === true) {
           router.push("/");
           ToastMessage("Successfully Logged In!");
           setLoading(false);
-          console.log(res);
+          // console.log(res);
         } else {
           setLoading(false);
           ToastMessage(res.error);
@@ -54,7 +54,7 @@ const LoginPage = () => {
                   src="./loginImage.png"
                   height={800}
                   width={800}
-                  className="btn-"
+                  alt="LoginImage"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ const LoginPage = () => {
                     </submit>
                   </div>
                   <h3 className="text-center">
-                    <a href="/signup">Don't have an Account? Sign Up</a>
+                    <a href="/signup">Dont have an Account? Sign Up</a>
                   </h3>
                 </form>
               </div>

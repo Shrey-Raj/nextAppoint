@@ -7,15 +7,19 @@ import { InterPageLoader } from "@/components/ui/Loader";
 const Explore = () => {
   const [doctorList, setDoctorList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const getDoctorList = () => {
-    GlobalApi.getDoctorList().then((resp) => {
-      // console.log(resp.data.data);
-      setLoading(false);
-      setDoctorList(resp.data.data);
-    });
-  };
+
+  
 
   useEffect(() => {
+
+    const getDoctorList = () => {
+      GlobalApi.getDoctorList().then((resp) => {
+        // console.log(resp.data.data);
+        setLoading(false);
+        setDoctorList(resp.data.data);
+      });
+    };
+
     getDoctorList();
   }, []);
 

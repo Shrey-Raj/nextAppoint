@@ -23,15 +23,16 @@ function CategoryList() {
     const params=usePathname();
     const category=params.split('/')[2];
     useEffect(()=>{
+      const getCategoryList=()=>{
+        GlobalApi.getCategory().then(resp=>{
+          // console.log(resp.data.data);
+          setCategoryList(resp.data.data);
+        })
+      }
     getCategoryList();
   },[])
 
-  const getCategoryList=()=>{
-    GlobalApi.getCategory().then(resp=>{
-      // console.log(resp.data.data);
-      setCategoryList(resp.data.data);
-    })
-  }
+
   return (
     <div className='h-screen mt-5 flex flex-col'>
         <Command className="hidden sm:block">

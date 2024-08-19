@@ -16,7 +16,7 @@ const axiosClient = axios.create({
 const login = async (data) => {
   try {
     const response = await axiosClient.post("/auth/local", data);
-    console.log(response);
+    // console.log(response);
 
     const { jwt } = response.data;
 
@@ -27,7 +27,7 @@ const login = async (data) => {
     const expires = new Date(Date.now() + 10 * 60 * 1000); //10 minutes
     const session = await encrypt({ jwt, user, expires });
 
-    console.log("SESSION VALUE FROM GLOBAL-API : ", session);
+    // console.log("SESSION VALUE FROM GLOBAL-API : ", session);
 
     await setCookies(session, expires);
 

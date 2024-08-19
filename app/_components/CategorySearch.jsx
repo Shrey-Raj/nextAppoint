@@ -13,15 +13,16 @@ const CategorySearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
+    const getCategoryList = () => {
+      GlobalApi.getCategory().then((resp) => {
+        // console.log(resp.data.data);
+        setCategoryList(resp.data.data);
+      });
+    };
     getCategoryList();
   }, []);
 
-  const getCategoryList = () => {
-    GlobalApi.getCategory().then((resp) => {
-      // console.log(resp.data.data);
-      setCategoryList(resp.data.data);
-    });
-  };
+  
 
   return (
     <div className="mb-10 items-center flex flex-col gap-4">

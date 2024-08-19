@@ -9,15 +9,16 @@ export default function Home() {
   const [doctorList, setDoctorList] = useState([]);
 
   useEffect(() => {
+    const getDoctorList = () => {
+      GlobalApi.getDoctorList().then((resp) => {
+        // console.log(resp.data.data);
+        setDoctorList(resp.data.data);
+      });
+    };
+  
     getDoctorList();
   }, []);
 
-  const getDoctorList = () => {
-    GlobalApi.getDoctorList().then((resp) => {
-      // console.log(resp.data.data);
-      setDoctorList(resp.data.data);
-    });
-  };
 
 
   return (

@@ -23,14 +23,15 @@ export function DropdownMenuRadioGroupDemo() {
   const [position, setPosition] =  useState(category);
     
     useEffect(()=>{
+      const getCategoryList=()=>{
+        GlobalApi.getCategory().then(resp=>{
+          setCategoryList(resp.data.data);
+        })
+      }
     getCategoryList();
   },[])
 
-  const getCategoryList=()=>{
-    GlobalApi.getCategory().then(resp=>{
-      setCategoryList(resp.data.data);
-    })
-  }
+  
 
   return (
     <DropdownMenu>

@@ -9,16 +9,16 @@ function Details({ params }) {
   const [doctor, setDoctor] = useState(null); 
   const [loading, setLoading] = useState(true); 
 
-  const getDoctorById = () => {
+  const getDoctorById = useCallback(() => {
     GlobalApi.getDoctorById(params.recordId).then(resp => {
       setDoctor(resp.data.data);
       setLoading(false); 
     });
-  };
+  }, [params.recordId]); 
 
   useEffect(() => {
     getDoctorById();
-  }, [getDoctorById]); 
+  }, [getDoctorById]);
 
   return (
     <div className='p-5 md:px-10'>

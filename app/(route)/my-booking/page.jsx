@@ -12,14 +12,15 @@ function MyBooking() {
 
   const [bookingList, setBookingList] = useState([]);
 
-  const getUserBookingList = () => {
-    GlobalApi.getUserBookingList(user?.email).then((resp) => {
-      // console.log(resp.data.data)
-      setBookingList(resp.data.data);
-    });
-  };
+
 
   useEffect(() => {
+    const getUserBookingList = () => {
+      GlobalApi.getUserBookingList(user?.email).then((resp) => {
+        // console.log(resp.data.data)
+        setBookingList(resp.data.data);
+      });
+    };
     user && getUserBookingList();
   }, [user, getUserBookingList]);
 
