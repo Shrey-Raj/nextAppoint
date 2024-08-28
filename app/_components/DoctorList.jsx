@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 
 function DoctorList({ doctorList, heading = "Popular Doctors" }) {
-  // console.log("doctorList = ", doctorList);
 
   const imageUrl = "/logo.svg";
 
@@ -23,16 +22,19 @@ function DoctorList({ doctorList, heading = "Popular Doctors" }) {
                     key={doctor.id} // Use doctor's id as key
                     className="border-[1px] rounded-lg p-3 cursor-pointer hover:border-primary hover:shadow-sm transition-all ease-in-out flex flex-col justify-between"
                   >
-                    <Image
-                      src={
-                        doctor?.attributes?.image?.data[0]?.attributes?.url ||
-                        imageUrl
-                      }
-                      alt="doctor"
-                      width={500}
-                      height={200}
-                      className="lg:h-[300px] md:h-[300px] sm:h-[200px] w-full object-cover rounded-lg"
-                    />
+                    <Link 
+                    href={"/details/" + doctor?.id}>
+                      <Image
+                        src={
+                          doctor?.attributes?.image?.data[0]?.attributes?.url ||
+                          imageUrl
+                        }
+                        alt="doctor"
+                        width={500}
+                        height={200}
+                        className="lg:h-[300px] md:h-[300px] sm:h-[200px] w-full object-cover rounded-lg"
+                      />
+                    </Link>
                     <div className="mt-3 flex flex-col flex-grow">
                       <h2 className="text-[12px] bg-blue-100 p-1 rounded-full px-2 text-primary font-bold my-2 mb-3">
                         {doctor.attributes.name}

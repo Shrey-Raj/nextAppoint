@@ -30,11 +30,11 @@ const CategorySearch = () => {
         Search
         <span className="text-primary"> Doctors</span>
       </h2>
-      <h2 className="text-gray-500 text-xl">
+      <h2 className="text-gray-500 text-xl  sm:px-6">
         Search your Doctors and Book Appointment in one Click
       </h2>
 
-      <div className="flex w-full max-w-sm items-center">
+      <div className="sm:px-6 flex w-full max-w-sm items-center">
         <Input type="text" className="mr-2" placeholder="Search ..."
          value={searchTerm}
          onChange={(e) => setSearchTerm(e.target.value)}
@@ -61,7 +61,7 @@ const CategorySearch = () => {
                   alt='icon'
                   width={40}
                   height={40}/>
-                   <label className="text-sm font-bold capitalize ">
+                   <label className="text-xs sm:text-sm font-bold capitalize ">
                   {item.attributes?.name} 
                     </label>
                 </Link>

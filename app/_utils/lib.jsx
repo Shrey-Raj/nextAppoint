@@ -28,7 +28,7 @@ export async function decrypt(input) {
 
 export async function setCookies(session, expires) {
   try {
-    console.log("SESSION VALUE FROM /UTILS/LIB  = ", session, expires);
+    // console.log("SESSION VALUE FROM /UTILS/LIB  = ", session, expires);
 
     cookies().set("session", session, {
       expires: expires,
@@ -50,7 +50,7 @@ export async function updateSession(request) {
   if (!session) return;
   const parsed = await decrypt(session);
   // parsed.expires = new Date(Date.now() + 10 * 60 * 60 * 1000);
-  parsed.expires = new Date(Date.now() + 120 * 1000);
+  parsed.expires = new Date(Date.now() + 10 * 60 * 1000);
   const res = NextResponse.next();
   res.cookies.set({
     name: "session",

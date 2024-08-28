@@ -100,12 +100,13 @@ const LoginPage = () => {
                   </div>
 
                   <div className="relative">
-                    <submit
+                    <button 
+                      type="submit"
                       className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500 rounded-lg transition duration-200 hover:bg-indigo-600 ease"
                       onClick={handleSubmit}
                     >
                       Submit
-                    </submit>
+                    </button>
                   </div>
                   <h3 className="text-center">
                     <a href="/signup">Dont have an Account? Sign Up</a>

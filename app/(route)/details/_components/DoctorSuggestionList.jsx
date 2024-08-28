@@ -18,7 +18,7 @@ function DoctorSuggestionList() {
         })
       }
       getDoctorList();
-    },[getDoctorList]); 
+    },[]); 
 
 
   return (

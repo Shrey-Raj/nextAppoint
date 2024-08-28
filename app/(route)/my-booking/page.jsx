@@ -6,13 +6,12 @@ import GlobalApi from "@/app/_utils/GlobalApi";
 import { useSession } from "@/app/sessionValidator";
 
 function MyBooking() {
-  const user = useSession()?.user?.data;
-  
-  console.log(user.email); 
+  let { user } = useSession()?.user;
+  user = user.data;
+
+  console.log(user?.email);
 
   const [bookingList, setBookingList] = useState([]);
-
-
 
   useEffect(() => {
     const getUserBookingList = () => {
@@ -22,7 +21,7 @@ function MyBooking() {
       });
     };
     user && getUserBookingList();
-  }, [user, getUserBookingList]);
+  }, [user]);
 
   /**
    * Used to Filter User Booking

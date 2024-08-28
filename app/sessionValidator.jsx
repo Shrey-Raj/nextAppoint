@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { getSession } from "./_utils/lib";
+import { getSession, logout } from "./_utils/lib";
 import {Loader} from "@/components/ui/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,6 +34,7 @@ export default function SessionValidator({ children }) {
           }
         } else {
           // If session is not present, allow access only to /login or /signup
+          await logout(); 
           if (currentPath !== "login" && currentPath !== "signup" && currentPath !== "/") {
             ToastMessage("Session Expired! You need to Login/Signup first. ");
             router.push("/");

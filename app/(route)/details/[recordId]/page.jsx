@@ -1,6 +1,6 @@
 "use client";
 import GlobalApi from '@/app/_utils/GlobalApi';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import DoctorDetail from '../_components/DoctorDetail';
 import DoctorSuggestionList from '../_components/DoctorSuggestionList';
 import {InterPageLoader} from '@/components/ui/Loader';
@@ -9,16 +9,16 @@ function Details({ params }) {
   const [doctor, setDoctor] = useState(null); 
   const [loading, setLoading] = useState(true); 
 
-  const getDoctorById = useCallback(() => {
-    GlobalApi.getDoctorById(params.recordId).then(resp => {
-      setDoctor(resp.data.data);
-      setLoading(false); 
-    });
-  }, [params.recordId]); 
-
   useEffect(() => {
+    const getDoctorById = () => {
+      GlobalApi.getDoctorById(params.recordId).then(resp => {
+        setDoctor(resp.data.data);
+        setLoading(false); 
+      });
+    };
+
     getDoctorById();
-  }, [getDoctorById]);
+  }, [params.recordId]);
 
   return (
     <div className='p-5 md:px-10'>

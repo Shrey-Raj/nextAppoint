@@ -24,9 +24,9 @@ const SignupPage = () => {
       .then((res) => {
         console.log(res);
         if (res.success === true) {
+          setLoading(false);
           router.push("/");
           ToastMessage("Successfully Signed In!");
-          setLoading(false);
           console.log(res);
         } else {
           setLoading(false);
@@ -116,12 +116,13 @@ const SignupPage = () => {
                   </div>
 
                   <div className="relative">
-                    <submit
+                    <button
+                    type="submit"
                       className="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-indigo-500 rounded-lg transition duration-200 hover:bg-indigo-600 ease"
                       onClick={handleSubmit}
                     >
                       Submit
-                    </submit>
+                    </button>
                   </div>
 
                   <h3 className="text-center">
