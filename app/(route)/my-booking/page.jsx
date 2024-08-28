@@ -6,8 +6,8 @@ import GlobalApi from "@/app/_utils/GlobalApi";
 import { useSession } from "@/app/sessionValidator";
 
 function MyBooking() {
-  let { user } = useSession()?.user;
-  user = user.data;
+  let { user } = useSession();
+  user = user?.data ; 
 
   console.log(user?.email);
 
