@@ -4,7 +4,7 @@ import { encrypt, setCookies, logout, getSession } from "./lib";
 
 const API_KEY = process.env.NEXT_PUBLIC_STRAPI_API_KEY;
 // const baseURL = `http://localhost:1337/api`;
-const baseURL = "https://next-appoint-strapi-backend.onrender.com/api";
+const baseURL = process.env.NEXT_PUBLIC_STRAPI_BASE_URL + "/api";
 
 const axiosClient = axios.create({
   baseURL: baseURL,
